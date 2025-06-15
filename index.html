@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cinta Kita</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(to bottom, #b388eb, #f7c6ff);
+            color: #4a004e;
+            text-align: center;
+            padding: 20px;
+        }
+        .timer {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 150px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>💜 Cinta Kita 💗</h1>
+    <p><strong>Jadian sejak:</strong> <b>28 Maret 2025</b></p>
+    <p class="timer" id="timer"></p>
+
+    <div class="box">
+        <p>
+            Haii my dede, my princess, my love, my honney, my bonnie, my sweet, my cutiess,<br>
+            my love, my darling, my everything 🥺💕
+        </p>
+        <p>
+            Aku buat website ini biar kita bisa nyimpen kenangan kitaa kayak foto, video, sama lagu Spotify jugaa 🎶<br>
+            Nanti kita update bareng-bareng yaa sayang 😚
+        </p>
+        <p>
+            Semoga kamu suka sama hasilnya 💗<br>
+            Maaf yaa kalau masih jelek, gak bagus, gak lucu, pokoknya jelekk lahh 😅<br>
+            Kalo belum sempurna, maafin yaa...<br>
+            Karna yang sempurna itu rasa cintaku kepadamuuh~ (ciyahhh) 💘
+        </p>
+        <p>
+            I love you so much 💖<br>
+            I love you more 💞<br>
+            I love you first 💓<br>
+            and I love you forever 💞
+        </p>
+    </div>
+
+    <h2>💕 Love Gallery 💞</h2>
+<div class="gallery">
+  <img src="images/foto1.jpg" alt="foto.1.jpg">
+  <img src="images/foto2.jpg" alt="foto2.jpg">
+  <img src="images/foto3.jpg" alt="1000165657.jpg">
+</div
+
+    <h2>🎵 Playlist Kita</h2>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/65frnnQ8Lg9qJUB0bVAxV4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <script>
+        const startDate = new Date("2025-03-28T00:00:00");
+        function updateTimer() {
+            const now = new Date();
+            const diff = now - startDate;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+            document.getElementById("timer").textContent =
+                "Sudah bersama selama: " + days + " hari, " + hours + " jam, " + minutes + " menit, " + seconds + " detik";
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
